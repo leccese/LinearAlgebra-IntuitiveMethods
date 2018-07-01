@@ -1,2 +1,2 @@
 # LinearAlgebra-IntuitiveMethods
-A website providing content covering the conceptual insights of linear algebra
+A website providing conceptual insights of linear algebra
