@@ -1,51 +1,158 @@
-* {
-	margin = 0px;
-	padding = 0px;
-}
 html, body {
     padding: 0;
     margin: 0;
 }
-@font-face {
-    font-family: Bebas;
-    src: url(BEBAS___.ttf);
-}
 .container{
 	display: grid;
-	grid-template-rows: 150px 1fr;
+	grid-template-rows: 100px 1fr;
 	grid-template-columns: 200px 1fr 200px;
 	grid-column-gap: 10px;
 	grid-row-gap: 15px; 
-	background-color: gray;
+	align-items: top;
 	background-image: url("grid.png");
-
 }
 .header{
 	grid-area: 1 / 1 / 2 / 4;
-	display: grid;
-	grid-template-rows: 20px 1fr 20px;
-	grid-template-columns: 720px 1fr;
-	grid-column-gap: 10px;
-	grid-row-gap: 15px; 
 }
-.title{
-	grid-area: 2 / 1 / 3 / 3;
-	font: bold 70px georgia;
+.title-container{
+	display: inline-block;
+}
+.title{ 
+	font: bold 60px georgia;
+	text-indent: 10vw;
+	display: inline-block;
 	color: rgb(38, 57, 83);
+	vertical-align: top;
+	padding-top: 15px;
+}
+.padding{
+	
+	display: inline-block;
+	font: 40px georgia;
 }
 .subtitle{
+	margin-top: 10px; 
+	display: inline-block;
 	font: 40px georgia;
-	grid-area: 2 / 2 / 3 / 3;
+	vertical-align: top;
 }
+.menu{
+		display: none;
+	}
+.subtext{
+		display: none;
+	}	
 .content{
-	background-color: rgb(38, 57, 83);
 	grid-area: 2 / 1 / 3 / 2;
+	color: rgb(38, 57, 83);
+	font: 20px Trebuchet MS;
+	text-align: center;
+	background-color: white;
+	height: 300px;
+	border-radius: 15px;
+	margin-left: 10px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.label{
+	background-color: rgb(205,214,222);
+	buffer: 5px;
+	border-radius: 15px 15px 0px 0px;
+	color: rgb(38, 57, 83);
+	font: 20px Trebuchet MS;
+	text-align: center;
 }
 .body{
-		background-color: rgb(38, 57, 83);
+	color: rgb(38, 57, 83);
 	grid-area: 2 / 2 / 3 / 3;
+	background-color: white;
+	height: 800px;
+	border-radius: 15px;
+	padding: 10px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .about{
+	grid-area: 2 / 3 / 3 / 4;
+	color: rgb(38, 57, 83);
+	text-align: center;
+	background-color: white;
+	height: 300px;
+	border-radius: 15px;
+	margin-right: 10px;	
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+@media only screen and (max-width: 1100px) {
+	.container{
+		display: grid;
+		grid-template-rows: 100px 300px 1fr;
+		grid-template-columns: 200px 1fr;
+	}
+	.header{
+		grid-area: 1 / 1 / 2 / 3;
+	}
+	.menu{
+		display: none;
+	}
+	.subtext{
+		display: none;
+	}
+	.content{
+		grid-area: 2 / 1 / 3 / 2;
+	}
+	.body{
+		grid-area: 2 / 2 / 4 / 3;
+		margin-right: 10px;
+	}
+	.about{
+		grid-area: 3 / 1 / 4 / 2;
+		margin-left: 10px;	
+		margin-right: 0px;	
+}
+
+@media only screen and (max-width: 900px) {
+	.container{
+		display: block;	
+	}
+	.header{
+		display: block
+	}
+	.title{
+		display: block;
+		font: bold 8vw georgia;
+		height: 8vw;
+		text-align: center;
+	}
+	.subtitle{
+		display: none;
+	}
+	.subtext{
+		display: block;
+		font: 4vw georgia;
+		height: 5vw;
+		color: rgb(38, 57, 83);
+		text-align: center;
+	}
+	.menu{
+		display: block;
 		background-color: rgb(38, 57, 83);
-	grid-area: 2 / 3 / 3 / 4;		;
+		font: 3vw Trebuchet MS;
+		color: white;
+		height: 4vw;
+		text-align: center;
+		border-radius: 20px;
+		margin-right: 10px;
+		margin-left: 10px;
+		margin-bottom: 10px;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	}
+	.content{
+		display: none;	
+	}
+	.body{
+		display: block;
+		margin-left: 10px
+	}
+	.about{
+		display: none;	
 }
