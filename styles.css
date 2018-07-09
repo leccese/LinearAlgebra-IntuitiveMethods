@@ -136,9 +136,10 @@ html, body {
 	.menu{
 		display: block;
 		background-color: rgb(38, 57, 83);
-		font: 3vw Trebuchet MS;
+		font: 18px Trebuchet MS;
 		color: white;
 		height: 4vw;
+		min-height: 20px;
 		text-align: center;
 		border-radius: 20px;
 		margin-right: 10px;
